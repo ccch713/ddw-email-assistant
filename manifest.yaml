@@ -13,6 +13,6 @@ tags:
 config:
   auto_reply_enabled: false
   sync_interval_minutes: 30
-  ai_provider: "minimax"
+  ai_provider: "ddw-gateway"
   max_drafts_per_day: 50
   audit_retention_days: 90

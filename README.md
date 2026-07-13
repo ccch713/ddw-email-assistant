@@ -97,7 +97,7 @@ pip install -r requirements.txt
 1. Access DDW dashboard → Plugins → Email Assistant
 2. Add your email account (select provider from preset list)
 3. Enter authorization code (see [获取授权码](#obtaining-authorization-codes) for Chinese email providers)
-4. Configure LLM provider (API key for MiniMax/DeepSeek, or local Ollama)
+4. Configure LLM provider via DDW platform settings (see [DDW LLM Configuration](https://github.com/ccch713/ddw-ai-hub#llm-configuration))
 5. Enable auto-classification and draft generation
 6. Review and confirm drafts in the dashboard
 
@@ -133,16 +133,18 @@ Chinese email providers require authorization codes (not your regular password):
 
 ## LLM Cost
 
-Email processing is extremely lightweight:
+Email processing is extremely lightweight. LLM configuration is managed by the DDW platform — this plugin delegates all AI calls to DDW's unified LLM gateway.
 
-| Scenario | Tokens/day | Monthly Cost (MiniMax Max) |
-|:---------|:-----------|:---------------------------|
+| Scenario | Tokens/day | Estimated Cost |
+|:---------|:-----------|:---------------|
 | Classification (100 emails) | ~20,000 | ~¥0.01 |
 | Draft generation (10 replies) | ~5,000 | ~¥0.003 |
 | Auto-reply (simple) | ~3,000 | ~¥0.002 |
 | **Total** | **~28,000** | **~¥0.02** |
 
-Works with any OpenAI-compatible API: MiniMax, DeepSeek, Qwen, or local LLM via Ollama.
+Compatible with any OpenAI-compatible API provider or local LLM. The actual cost depends on your chosen provider and pricing plan.
+
+> **Note**: This plugin uses DDW's LLM gateway for all AI operations. Please refer to the [DDW AI Hub documentation](https://github.com/ccch713/ddw-ai-hub) for LLM provider configuration and pricing details.
 
 ## Security
 
@@ -184,7 +186,7 @@ DDW 邮件助手是 [DDW AI 底座平台](https://github.com/ccch713/ddw-ai-hub)
 
 ### LLM 成本
 
-处理 100 封邮件/天，月成本仅 ¥0.02（MiniMax Max 套餐内）。兼容 MiniMax、DeepSeek、通义千问或任何 OpenAI 兼容 API，也支持本地 Ollama 小模型。
+处理 100 封邮件/天，LLM 调用成本极低（约 ¥0.02/月）。兼容任何 OpenAI 兼容 API 或本地小模型。LLM 配置由 DDW 底座平台统一管理，详见 [DDW 平台文档](https://github.com/ccch713/ddw-ai-hub)。
 
 ### 更多信息
 
