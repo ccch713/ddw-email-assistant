@@ -1,0 +1,18 @@
+# DDW Email Assistant - Dependencies
+# Core: Python stdlib imaplib/smtplib (zero external deps for email)
+
+# Database
+sqlalchemy>=2.0.0
+
+# Web framework (provided by DDW platform)
+fastapi>=0.100.0
+
+# Encryption
+cryptography>=41.0.0
+
+# Scheduling (optional, for auto-sync)
+# apscheduler>=3.10.0
+
+# Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0

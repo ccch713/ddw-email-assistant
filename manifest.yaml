@@ -1,0 +1,18 @@
+name: ddw-email-assistant
+version: "1.0.0"
+description: "DDW 邮件助手 - 企业级邮件整理与自动回复插件"
+author: "DDW AI Hub Team"
+license: "Apache-2.0"
+min_platform_version: "1.0.0"
+tags:
+  - email
+  - automation
+  - ai
+  - imap
+  - smtp
+config:
+  auto_reply_enabled: false
+  sync_interval_minutes: 30
+  ai_provider: "minimax"
+  max_drafts_per_day: 50
+  audit_retention_days: 90
